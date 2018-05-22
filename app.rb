@@ -17,4 +17,15 @@ class RPS < Sinatra::Base
     @name = session[:name]
     erb(:play)
   end
+
+  post'/chosing' do
+   session[:shape] = params[:shape]
+   redirect '/game'
+  end
+
+  get '/game' do
+    @shape = session[:shape]
+    @name = session[:name]
+    erb(:game)
+  end
 end
