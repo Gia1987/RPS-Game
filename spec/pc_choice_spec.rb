@@ -3,7 +3,7 @@ require './lib/pc_choice'
 
 describe AI do
 
-  context 'AI choice a weapon randomly' do
+  context '#move' do
     it 'choice from an array of weapons' do
       # arrange
       srand(0)
