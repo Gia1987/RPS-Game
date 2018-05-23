@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require_relative './lib/pc_choice'
+require_relative './lib/result'
 # to run the app type : $ rerun -- rackup --port 4000 config.ru (for Windows)
 
 class RPS < Sinatra::Base
@@ -25,9 +26,10 @@ class RPS < Sinatra::Base
   end
 
   get '/game' do
-    @shape = session[:shape]
     @name = session[:name]
+    @shape = session[:shape]
     @AI_shape = AI.move
+    @result = Game.result(@shape, @AI_shape)
     erb(:game)
   end
 end
