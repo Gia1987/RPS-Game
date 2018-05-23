@@ -8,7 +8,7 @@ feature 'Nick name' do
   end
 end
 
-feature 'weapon available' do
+feature 'weapons' do
   scenario 'player can choice own weapon' do
     sign_in
     expect(page).to have_button('Rock')
