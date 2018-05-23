@@ -1,6 +1,6 @@
 class AI
 
-  def self.move
+  def move
     ['Rock','Paper','Scissors'].sample
   end
 end
