@@ -18,7 +18,6 @@ describe Game do
     it'increment pc_score' do
       #arrange
       game.result('Rock','Paper')
-      game.score
       #assert
       expect(game.pc_score).to eq 1
     end
@@ -26,7 +25,6 @@ describe Game do
     it'increment player_score' do
       #arrange
       game.result('Paper','Rock')
-      game.score
       #assert
       expect(game.player_score).to eq 1
     end
