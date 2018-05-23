@@ -17,6 +17,7 @@ class Game
     else
       @res = 'You Won'
     end
+    score
     return @res
   end
 
