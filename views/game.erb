@@ -1,2 +1,9 @@
-<h1><%= @name %> chosen:</h1> 
+<% if @name == ''%>
+  <% @name = 'Player' %>
+<% end %>
+<h1><%= @name %> chosen:</h1>
 <h1><%= @shape %></h1>
+<div style="text-align:left ">
+  <h1>PC chosen:</h1>
+  <h1 ><%= @AI_shape %></h1>
+</div>

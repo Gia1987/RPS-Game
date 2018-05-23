@@ -1,3 +1,6 @@
+<% if @name == ''%>
+  <% @name = 'Player' %>
+<% end %>
 <h1>Welcome <%= @name %> !</h1>
 <h2>Please choose your weapon :</h2>
 <form class="" action="/chosing" method="post">
