@@ -1,10 +1,19 @@
-<% if @name == ''%>
-  <% @name = 'Player' %>
-<% end %>
-<h1>Welcome <%= @name %> !</h1>
-<h2>Please choose your weapon :</h2>
-<form class="" action="/chosing" method="post">
-  <button type="submit" name="shape" value="Rock">Rock</button>
-  <button type="submit" name="shape" value="Paper">Paper</button>
-  <button type="submit" name="shape" value="Scissors">Scissors</button>
-</form>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <% if @name == ''%>
+      <% @name = 'Player' %>
+    <% end %>
+    <h1>Welcome <%= @name %> !</h1>
+    <h2>Please choose your weapon :</h2>
+    <form id='weapons' action="/chosing" method="post">
+      <button type="submit" name="shape" value="Rock">Rock</button>
+      <button type="submit" name="shape" value="Paper">Paper</button>
+      <button type="submit" name="shape" value="Scissors">Scissors</button>
+    </form>
+  </body>
+</html>

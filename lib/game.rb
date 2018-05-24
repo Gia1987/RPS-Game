@@ -18,7 +18,7 @@ class Game
       @res = 'You Won'
     end
     score
-    return @res
+    @res
   end
 
   def score
