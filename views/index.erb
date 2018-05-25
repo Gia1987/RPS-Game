@@ -4,18 +4,19 @@
     <style>
 
       body {
-        padding: 0;
-        margin: 0;
-        background-image: url('http://roleplayerschronicle.com/wp-content/uploads/2013/06/Rock_Paper_Scissors4xeDetail.png');
+        position: relative;
+        top: 50px;
+        font-family: 'Orbitron', sans-serif;
+        text-align: center;
+        background-image: url('http://www.goodwp.com/images/201105/goodwp.com_18403.jpg');
         max-width: 100%;
         background-repeat: no-repeat;
         background-size: 1400px 800px;
       }
-      h1, h2 {
-        text-align: center;
-      }
-      form {
-        text-align: center;
+      #submit{
+        background: none;
+        border: none;
+        cursor: pointer;
       }
     </style>
     <meta charset="utf-8">
@@ -26,7 +27,7 @@
     <h2>Please enter your name:</h2>
     <form action="/sign_in" method="post">
       <input type="text" name="name">
-      <input type="submit" value="Submit">
+      <input id="submit" type="submit" value="Submit">
     </form>
   </body>
 </html>

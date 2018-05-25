@@ -1,24 +1,70 @@
-<% if @name == ''%>
-  <% @name = 'Player' %>
-<% end %>
-<h1><%= @name %> chosen:</h1>
-<h1><%= @shape %></h1>
-<div style="text-align:left ">
-  <h1>PC chosen:</h1>
-  <h1 ><%= @AI_shape %></h1>
-</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body{
+        background-image: url('http://i.imgur.com/NStBJ.png');
+        max-width: 100%;
+        background-repeat: no-repeat;
+        background-size: 1400px 800px;
+      }
 
-<div >
-  <%= @result %>
-</div>
+      #player{
+        text-align: center;
+        position: relative;
+        left: -180px;
+      }
+      #pc{
+        text-align: center;
+        position: relative;
+        top: -175px;
+        left: 190px;
+      }
 
-<div >
-  PC score :<%= @pc_score %>
-</div>
-<div >
-  <%= @name %> score :<%= @player_score %>
-</div>
-<div id="buttons">
-  <a href="/play"><button>PLAY AGAIN</button></a>
-  <a href="/"><button>RESET</button></a>
-</div>
+      #result{
+        position: relative;
+        top: -150px;
+        text-align: center;
+        font-size: 50px;
+      }
+
+      #buttons{
+        text-align: center;
+        position: relative;
+        top: -100px;
+        padding: 20px;
+      }
+
+      #button{
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+      }
+    </style>
+    <meta charset="utf-8">
+    <title>Rock | Paper | Scissors</title>
+  </head>
+  <body>
+    <% if @name == ''%>
+      <% @name = 'Player' %>
+    <% end %>
+    <div id="player">
+      <h1><%= @name %> chosen:</h1>
+      <h1><%= @shape %></h1>
+      <h1> score :<%= @player_score %></h1>
+    </div>
+    <div id="pc">
+      <h1>PC chosen:</h1>
+      <h1 ><%= @AI_shape %></h1>
+      <h1> score :<%= @pc_score %></h1>
+    </div>
+    <div id="result" >
+      <%= @result %>
+    </div>
+    <div id="buttons">
+      <a href="/play"><button id="button">PLAY AGAIN</button></a>
+      <a href="/"><button id="button">RESET</button></a>
+    </div>
+  </body>
+</html>

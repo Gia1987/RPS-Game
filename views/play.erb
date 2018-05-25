@@ -1,19 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <style >
+      body{
+        position: relative;
+        top: 250px;
+        left: 20px;
+        text-align: center;
+        font-family: 'Orbitron', sans-serif;
+        background-image: url('https://orig00.deviantart.net/8b29/f/2012/072/5/e/rock_paper_scissors_by_ramy-d4smze4.jpg');
+        max-width: 100%;
+        background-repeat: no-repeat;
+        background-size: 1400px 800px;
+      }
+      #button {
+        border: none;
+        cursor: pointer;
+        background: none;
+        font-size: 24px;
+      }
+    </style>
     <meta charset="utf-8">
-    <title></title>
+    <title>Rock | Paper | Scissors</title>
   </head>
   <body>
     <% if @name == ''%>
       <% @name = 'Player' %>
     <% end %>
     <h1>Welcome <%= @name %> !</h1>
-    <h2>Please choose your weapon :</h2>
-    <form id='weapons' action="/chosing" method="post">
-      <button type="submit" name="shape" value="Rock">Rock</button>
-      <button type="submit" name="shape" value="Paper">Paper</button>
-      <button type="submit" name="shape" value="Scissors">Scissors</button>
+    <h2>Choose your weapon :</h2>
+    <form class="button" action="/chosing" method="post">
+      <button id="button" type="submit" name="shape" value="Rock">Rock</button>
+      <button id="button" type="submit" name="shape" value="Paper">Paper</button>
+      <button id="button" type="submit" name="shape" value="Scissors">Scissors</button>
     </form>
   </body>
 </html>
