@@ -8,10 +8,14 @@ feature ' chose a weapons' do
     expect(page).to have_button('Paper')
     expect(page).to have_button('Scissors')
   end
-  scenario 'player and AI choosen own weapon' do
-    srand(0)
+  scenario 'player choosen own weapon' do
     sign_in
     click_button 'Rock'
+    expect(page).to have_content("Rock")
+  end
+  scenario 'AI choosen own weapon' do
+    sign_in
+    srand(0)
     expect(page).to have_content("Rock")
   end
 end
