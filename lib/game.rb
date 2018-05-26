@@ -4,28 +4,18 @@ class Game
   def initialize
     @player_score = 0
     @pc_score = 0
-    @res = 'Is a Draw'
   end
 
   def result(player, pc)
-    if player == pc
-      @res = 'Is a Draw'
-    elsif player == 'Rock' && pc == 'Paper' ||
-          player == 'Paper' && pc == 'Scissors' ||
-          player == 'Scissors' && pc == 'Rock'
-      @res = 'You Lose'
-    else
-      @res = 'You Won'
-    end
-    score
-    @res
+    condition = (player == 'Rock' && pc == 'Paper') ||(player == 'Paper' && pc == 'Scissors') ||
+                (player == 'Scissors' && pc == 'Rock')
+    return @res = 'Is a Draw' if player == pc
+    condition ? @res = 'You Lose' : @res = 'You Win'
+    score && @res
   end
 
   def score
-    if @res == 'You Lose'
-      @pc_score += 1
-    elsif @res == 'You Won'
-      @player_score += 1
-    end
+    return @pc_score += 1 if @res == 'You Lose'
+    return @res == 'You Win' if @player_score += 1
   end
 end
