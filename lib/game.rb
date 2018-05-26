@@ -7,7 +7,8 @@ class Game
   end
 
   def result(player, pc)
-    condition = (player == 'Rock' && pc == 'Paper') ||(player == 'Paper' && pc == 'Scissors') ||
+    condition = (player == 'Rock' && pc == 'Paper') ||
+                (player == 'Paper' && pc == 'Scissors') ||
                 (player == 'Scissors' && pc == 'Rock')
     return @res = 'Is a Draw' if player == pc
     condition ? @res = 'You Lose' : @res = 'You Win'
@@ -16,6 +17,6 @@ class Game
 
   def score
     return @pc_score += 1 if @res == 'You Lose'
-    return @res == 'You Win' if @player_score += 1
+    return @player_score += 1 if @res == 'You Win'
   end
 end
