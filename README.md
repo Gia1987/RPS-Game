@@ -4,7 +4,7 @@ A basic web application created using ruby, sinatra HTML and CSS, allowing users
 ### Getting Started
 - Clone this repository.
 - Run bundle install to install dependencies listed in Gemfile.
-- Run shotgun config.ru
+- Run rackup
 
 ### Screenshots
 Game starts asking user to insert own name.
