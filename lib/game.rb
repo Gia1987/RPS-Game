@@ -12,7 +12,8 @@ class Game
                 (player == 'Scissors' && pc == 'Rock')
     return @res = 'Is a Draw' if player == pc
     condition ? @res = 'You Lose' : @res = 'You Win'
-    score && @res
+    score
+    @res
   end
 
   def score

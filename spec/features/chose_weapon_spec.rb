@@ -14,8 +14,9 @@ feature ' chose a weapons' do
     expect(page).to have_content("Rock")
   end
   scenario 'AI choosen own weapon' do
-    sign_in
     srand(0)
+    sign_in
+    click_button 'Rock'
     expect(page).to have_content("Rock")
   end
 end
