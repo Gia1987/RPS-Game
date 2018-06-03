@@ -1,3 +1,4 @@
+# Game class manage the points and winning condition
 class Game
   attr_reader :player_score, :pc_score
 
@@ -9,15 +10,15 @@ class Game
   def result(player, pc)
     condition = (player == 'Rock' && pc == 'Paper') ||
                 (player == 'Paper' && pc == 'Scissors') ||
-                (player == 'Scissors' && pc == 'Rock')
-    return @res = 'Is a Draw' if player == pc
+                (player == 'Scissors' && pc == 'Rock') # winning conditions
+    return @res = "It's a Draw" if player == pc
     condition ? @res = 'You Lose' : @res = 'You Win'
-    score
-    @res
+    score # call method score to icrease the points
+    @res # returns result
   end
 
   def score
-    return @pc_score += 1 if @res == 'You Lose'
-    return @player_score += 1 if @res == 'You Win'
+    @pc_score += 1 if @res == 'You Lose' # pc_score rising by 1 if wins
+    @player_score += 1 if @res == 'You Win' # player_score rising by 1 if wins
   end
 end

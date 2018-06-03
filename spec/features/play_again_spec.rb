@@ -1,5 +1,5 @@
-require './spec/spec_helper'
-require './spec/round_helper'
+require'./spec/spec_helper'
+require'./spec/round_helper'
 
 feature 'play again' do
   scenario 'clicking on "play again" link will redirect player to play page' do

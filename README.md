@@ -6,6 +6,9 @@ A basic web application created using ruby, sinatra HTML and CSS, allowing users
 - Run bundle install to install dependencies listed in Gemfile.
 - Run rackup
 
+### Or run the app form Heroku
+The app is hosted live using Heroku: [RPS-Game](https://boiling-wildwood-74884.herokuapp.com/)
+
 ### Screenshots
 Game starts asking user to insert own name.
 ![alt-text](Index_page.png)
