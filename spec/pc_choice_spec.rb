@@ -6,7 +6,7 @@ describe AI do
   context '#move' do
     it 'choice from an array of weapons' do
       # arrange
-      srand(0) #  mock computer to choice Rock
+      allow(ai).to receive(:rand) { 0 }
       # assert
       expect(ai.move).to eq 'Rock'
     end
